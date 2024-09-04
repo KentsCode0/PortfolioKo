@@ -12,6 +12,7 @@ h2 {
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
+    text-align: center;
 }
 
 .pictures-wrapper {
@@ -25,12 +26,13 @@ h2 {
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    width: 300px;
-    transition: transform 0.3s ease;
+    flex-basis: calc(50% - 20px);
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .work-item:hover {
-    transform: scale(1.10);
+    transform: scale(1.02);
+    background-color: #d2d2d2;
 }
 
 .work-item img {

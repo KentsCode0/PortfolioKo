@@ -1,33 +1,46 @@
 const works = {
-    ecommerce: [
-        'ecommerce/ecommerce1.png',
-        'ecommerce/ecommerce2.png',
-        'ecommerce/ecommerce3.png',
-        'ecommerce/ecommerce4.png',
-        'ecommerce/ecommerce5.png'
-    ],
-    anuwrap: [
-        'anuwrap/anu1.png',
-        'anuwrap/anu2.png',
-        'anuwrap/anu3.png',
-        'anuwrap/anu4.png',
-        'anuwrap/anu5.png',
-        'anuwrap/anu6.png',
-        'anuwrap/anu7.png',
-    ],
-    work3: [
-        'hola/hola1.png',
-        'hola/hola2.png',
-        'hola/hola3.png',
-    ],
-    work4: [
-        'brew/brew1.png',
-        'brew/brew2.png',
-        'brew/brew3.png',
-        'brew/brew4.png',
-        'brew/brew5.png',
-    ]
+    ecommerce: {
+        name: 'E-commerce Project',
+        images: [
+            'ecommerce/ecommerce1.png',
+            'ecommerce/ecommerce2.png',
+            'ecommerce/ecommerce3.png',
+            'ecommerce/ecommerce4.png',
+            'ecommerce/ecommerce5.png'
+        ]
+    },
+    anuwrap: {
+        name: 'Anuwrap Project',
+        images: [
+            'anuwrap/anu1.png',
+            'anuwrap/anu2.png',
+            'anuwrap/anu3.png',
+            'anuwrap/anu4.png',
+            'anuwrap/anu5.png',
+            'anuwrap/anu6.png',
+            'anuwrap/anu7.png',
+        ]
+    },
+    work3: {
+        name: 'Hola Project',
+        images: [
+            'hola/hola1.png',
+            'hola/hola2.png',
+            'hola/hola3.png',
+        ]
+    },
+    work4: {
+        name: 'Brewhalla Project',
+        images: [
+            'brew/brew1.png',
+            'brew/brew2.png',
+            'brew/brew3.png',
+            'brew/brew4.png',
+            'brew/brew5.png',
+        ]
+    }
 };
+
 
 export const renderWorks = () => {
     const worksWrapper = document.querySelector('.pictures-wrapper');
@@ -41,14 +54,23 @@ export const renderWorks = () => {
         return;
     }
 
-    Object.keys(works).forEach(work => {
+    Object.keys(works).forEach(workKey => {
+        const work = works[workKey];
+
+        // Create the container for each project
         const workDiv = document.createElement('div');
         workDiv.classList.add('work-item');
+
+        // Create and append the project name
+        const workTitle = document.createElement('h3');
+        workTitle.textContent = work.name;
+        workDiv.appendChild(workTitle);
 
         const contentDiv = document.createElement('div');
         contentDiv.classList.add('work-item-content');
 
-        works[work].forEach(picture => {
+        // Loop through images and add them to the content div
+        work.images.forEach(picture => {
             const img = document.createElement('img');
             img.src = `../assets/img/${picture}`;
             img.alt = picture;
