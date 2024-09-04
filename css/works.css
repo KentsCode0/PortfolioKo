@@ -1,5 +1,7 @@
 .works-wrapper {
     padding: 20px;
+    background-image: url('../assets/img/bg.jpg');
+    background-size: cover;
 }
 
 h2 {
@@ -26,6 +28,7 @@ h2 {
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
     flex-basis: calc(50% - 20px);
     transition: background-color 0.3s ease, transform 0.3s ease;
 }

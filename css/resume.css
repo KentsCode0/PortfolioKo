@@ -1,9 +1,8 @@
 .resume-wrapper {
     position: relative;
     padding: 20px;
-    background-color: #f9f9f9;
-    border: 1px solid #ccc;
-    border-radius: 10px;
+    background-image: url('../assets/img/bg.jpg');
+    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -28,7 +27,7 @@
 
 
 .profile-pic {
-    border-radius: 8px;
+    border-radius: 100%;
 }
 
 table {

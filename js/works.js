@@ -1,5 +1,6 @@
 const works = {
     ecommerce: {
+        // url: 'https://eccomerce-frontend-seven.vercel.app/',
         name: 'E-commerce Project',
         images: [
             'ecommerce/ecommerce1.png',
@@ -40,7 +41,6 @@ const works = {
         ]
     }
 };
-
 
 export const renderWorks = () => {
     const worksWrapper = document.querySelector('.pictures-wrapper');
@@ -85,6 +85,13 @@ export const renderWorks = () => {
 
             contentDiv.appendChild(img);
         });
+
+        // Add a click event to redirect to the project's URL
+        workDiv.onclick = () => {
+            if (work.url) {
+                window.location.href = work.url;
+            }
+        };
 
         workDiv.appendChild(contentDiv);
         worksWrapper.appendChild(workDiv);

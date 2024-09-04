@@ -2,8 +2,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: auto;
+    min-height: 78vh;
+    max-height: 100%;
     padding: 20px;
+    background-image: url('../assets/img/bg.jpg');
+    background-size: cover;
 }
 
 .contact-card {
