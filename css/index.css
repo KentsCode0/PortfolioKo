@@ -1,3 +1,9 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
 .container-wrapper {
     background: #fff;
     width: 100%;
@@ -14,12 +20,13 @@
     justify-content: space-between;
     background-color: #252525;
     background-size: cover;
-    padding: 0 10px;
+    padding: 10px;
 }
 .header-container h1 {
     background-image: linear-gradient(to Left, #333333, #8c8c8c, #333333);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    transition: background-image .3s ease;
 }
 
 .indiv-name {
@@ -33,14 +40,15 @@
 a {
     margin: 100px;
     text-decoration: none;
-    background-image: linear-gradient(to Left, #7e7e7e, #b8b5b5, #7e7e7e);
+    background-image: linear-gradient(to Left, #7e7e7e, #b8b5b5, #e1e1e1);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    transition: color .3s ease;
+    transition: color .3s ease background-image .3s ease;
 }
 
 a:hover {
     color: rgb(87, 87, 87);
+    background-image: linear-gradient(to right, #7e7e7e, #b8b5b5, #e1e1e1);
     top: 10px;
 }
 
